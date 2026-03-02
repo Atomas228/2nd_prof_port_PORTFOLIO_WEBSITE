@@ -1,0 +1,59 @@
+{% include "header.html" %}
+ <body>
+    <div class="container">
+        <div class="row my-5 py-5 gx-4 gx-lg-5 justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg>
+    <div class="px-4 text-center">
+          <h1 class="greeting">About Me</h1>
+    </div>
+    <div class="container my-5">
+        <div class="row align-items-center justify-content-center g-3">
+          <div class="col-lg-6">
+              <div class="p-4">
+                  <p class="about-text mb-0">
+                    {{ text1.text }}
+                  </p>
+              </div>
+          </div>
+          <div class="col-lg-6 text-center">
+              <img class="img-fluid" src="./static/assets/grad-pic.jpg" id="grad-pic">
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <section class="colored-section">
+    <div class="container scroll-img" id="football-container">
+        <div class="row align-items-center justify-content-center g-3">
+          <div class="col-lg-6 text-center">
+              <img class="img-fluid scroll-img" src="./static/assets/football-pic.png" id="football-pic">
+          </div>
+          <div class="col-lg-6">
+              <div class="p-4">
+                  <p class="about-text mb-0">
+                    {{ text2.text }}
+                  </p>
+              </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    <div class="container my-5 scroll-img">
+        <div class="row align-items-center justify-content-center g-3">
+          <div class="col-lg-6">
+              <div class="p-4">
+                  <p class="about-text mb-0">
+                    {{ text3.text }}
+                  </p>
+              </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid scroll-img" src="./static/assets/guitar-pic.jpg" id="guitar-pic">
+          </div>
+        </div>
+    </div>
+ </body>
+    {% include "footer.html" %}

@@ -1,0 +1,19 @@
+{% include "header.html" %}
+ <body>
+    <div class="container">
+        <div class="row my-5 py-5 gx-4 gx-lg-5 justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-image-alt" viewBox="0 0 20 20">
+                <path d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5z"/>
+              </svg>
+    <div class="px-4 text-center">
+          <h1 class="greeting">Album</h1>
+    </div>
+    </div>
+    <div class="row g-4">
+        {% for image in images %}
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="{{url_for('static', filename='assets/photos/'+image)}}" class="img-fluid rounded shadow-sm album-img" alt="">
+        </div>
+        {% endfor %}
+    </div>
+{% include "footer.html" %}

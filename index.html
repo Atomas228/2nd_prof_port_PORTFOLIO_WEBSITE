@@ -1,0 +1,39 @@
+{% include "header.html" %}
+<body id="top">
+   <div class="container">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+         <img src="./static/assets/profile-pic.jpg" alt="profile-picture" style="display: block; margin: 40px auto; width: 230px; height: auto; border-radius: 50%;">
+         <h1 class="greeting text-center">Hello, I am Tomas</h1>
+         <p class="introduction">{{ text1.text }}</p>
+      </div>
+      <div class="container my-5">
+         <div class="row align-items-center justify-content-center g-3">
+            <div class="col-lg-6">
+               <div class="text-box p-4">
+                  <p class="more-about-me mb-0">
+                     {{ text2.text }}
+                  </p>
+               </div>
+            </div>
+            <div class="col-lg-6 text-center">
+               <img class="img-fluid" src="./static/assets/me-n-team.jpg" id="me-n-team">
+            </div>
+         </div>
+      </div>
+      <div class="px-4 py-5 my-5 text-center scroll-img">
+         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-file-earmark-person ikonik" viewBox="0 0 20 20">
+            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z"/>
+         </svg>
+         <h1 class="greeting">Learn More</h1>
+         <div class="col-lg-6 mx-auto">
+            <p class="introduction">To get to know me better, you can also check my CV, go to section "About" or contact me in different ways.😊</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+               <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick=window.location.href="{{ url_for('download') }}">Check CV</button>
+               <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick=window.location.href="{{ url_for('contact') }}">Contact</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+{% include "footer.html" %}

@@ -1,0 +1,30 @@
+<body>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 my-5 border-top custom-footer">
+       <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Tomas Virsumirski</span> 
+       </div>
+       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+             <a class="text-body-secondary socials" href="mailto:tomas.virsumirski@gmail.com" aria-label="email">tomas.virsumirski@gmail.com</a>
+          </li>
+       </ul>
+    </footer>
+ </div>
+ <script>
+    const images = document.querySelectorAll('.scroll-img');
+    
+    window.addEventListener('scroll', () => {
+        images.forEach(img => {
+            const imgTop = img.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+    
+            if (imgTop < windowHeight - 100) {
+                img.classList.add('show');
+            }
+        });
+    });
+    </script>    
+</body>
